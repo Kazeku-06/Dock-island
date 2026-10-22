@@ -1,0 +1,14 @@
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/deps/thiserror-f847305e0b5aa489.d: /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs /home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/thiserror-5fa123703b0b6a56/out/private.rs
+
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/deps/libthiserror-f847305e0b5aa489.rlib: /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs /home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/thiserror-5fa123703b0b6a56/out/private.rs
+
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/deps/libthiserror-f847305e0b5aa489.rmeta: /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs /home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/thiserror-5fa123703b0b6a56/out/private.rs
+
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/lib.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/aserror.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/display.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/var.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/src/private.rs:
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/thiserror-5fa123703b0b6a56/out/private.rs:
+
+# env-dep:OUT_DIR=/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/thiserror-5fa123703b0b6a56/out

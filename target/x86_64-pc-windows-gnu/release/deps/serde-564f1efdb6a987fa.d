@@ -1,0 +1,14 @@
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/deps/serde-564f1efdb6a987fa.d: /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/serde-0c9f87f4aa68fce2/out/private.rs
+
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/deps/libserde-564f1efdb6a987fa.rlib: /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/serde-0c9f87f4aa68fce2/out/private.rs
+
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/deps/libserde-564f1efdb6a987fa.rmeta: /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/serde-0c9f87f4aa68fce2/out/private.rs
+
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs:
+/home/nopall/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs:
+/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/serde-0c9f87f4aa68fce2/out/private.rs:
+
+# env-dep:OUT_DIR=/home/nopall/dev/Dock-island/target/x86_64-pc-windows-gnu/release/build/serde-0c9f87f4aa68fce2/out
