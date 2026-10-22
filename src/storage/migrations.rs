@@ -39,8 +39,8 @@ pub fn run_migrations(conn: &Connection) -> Result<()> {
             tracing::info!("Applying migration {}: {}", migration.version, migration.name);
             conn.execute_batch(migration.sql)?;
             conn.execute(
-                "INSERT INTO migrations (version, name) VALUES (?, ?)",
-                [migration.version, migration.name],
+                "INSERT INTO migrations (version, name) VALUES (?1, ?2)",
+                rusqlite::params![migration.version, migration.name],
             )?;
         }
     }
