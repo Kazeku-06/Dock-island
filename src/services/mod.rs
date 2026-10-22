@@ -2,4 +2,5 @@
 
 pub mod scheduler;
 
-pub use scheduler::Scheduler;
+// Re-export when needed in later phases
+// pub use scheduler::Scheduler;

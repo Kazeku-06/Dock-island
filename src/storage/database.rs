@@ -2,7 +2,6 @@
 
 use anyhow::Result;
 use rusqlite::Connection;
-use std::path::PathBuf;
 
 pub struct Database {
     conn: Connection,

@@ -40,7 +40,7 @@ pub fn run_migrations(conn: &Connection) -> Result<()> {
             conn.execute_batch(migration.sql)?;
             conn.execute(
                 "INSERT INTO migrations (version, name) VALUES (?, ?)",
-                [&migration.version.to_string(), &migration.name],
+                [migration.version, migration.name],
             )?;
         }
     }
