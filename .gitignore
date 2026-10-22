@@ -30,6 +30,13 @@ desktop.ini
 *.so
 *.dylib
 
+# Docker
+.dockerignore
+
 # Config (keep template)
 config.toml
 !config.template.toml
+
+# Temporary build files
+topdock.exe
+*.tmp

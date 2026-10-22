@@ -1,0 +1,36 @@
+# Dockerfile for cross-compiling TopDock to Windows from Linux
+FROM rust:1.75-slim-bookworm
+
+# Install cross-compilation tools
+RUN apt-get update && apt-get install -y \
+    mingw-w64 \
+    pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+# Add Windows target
+RUN rustup target add x86_64-pc-windows-gnu
+
+# Setup cargo config
+RUN mkdir -p /root/.cargo && \
+    echo '[target.x86_64-pc-windows-gnu]\n\
+linker = "x86_64-w64-mingw32-gcc"\n\
+ar = "x86_64-w64-mingw32-ar"\n\
+\n\
+[build]\n\
+jobs = 4' > /root/.cargo/config.toml
+
+WORKDIR /app
+
+# Copy Cargo files first for caching
+COPY Cargo.toml Cargo.lock* ./
+
+# Copy source
+COPY src ./src
+COPY migrations ./migrations
+COPY assets ./assets
+
+# Build
+RUN cargo build --release --target x86_64-pc-windows-gnu
+
+# Output will be in /app/target/x86_64-pc-windows-gnu/release/topdock.exe
+CMD ["bash"]

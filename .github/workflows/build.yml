@@ -1,0 +1,79 @@
+name: Build TopDock
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        profile: minimal
+        override: true
+    
+    - name: Cache cargo registry
+      uses: actions/cache@v3
+      with:
+        path: ~/.cargo/registry
+        key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock') }}
+    
+    - name: Cache cargo index
+      uses: actions/cache@v3
+      with:
+        path: ~/.cargo/git
+        key: ${{ runner.os }}-cargo-git-${{ hashFiles('**/Cargo.lock') }}
+    
+    - name: Cache target directory
+      uses: actions/cache@v3
+      with:
+        path: target
+        key: ${{ runner.os }}-cargo-target-${{ hashFiles('**/Cargo.lock') }}
+    
+    - name: Build
+      run: cargo build --release --verbose
+    
+    - name: Run tests
+      run: cargo test --verbose
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: topdock-windows-x64
+        path: target/release/topdock.exe
+        
+  build-cross-compile:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        profile: minimal
+        target: x86_64-pc-windows-gnu
+        override: true
+    
+    - name: Install MinGW
+      run: |
+        sudo apt update
+        sudo apt install -y mingw-w64
+    
+    - name: Build for Windows
+      run: cargo build --release --target x86_64-pc-windows-gnu
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: topdock-windows-x64-cross
+        path: target/x86_64-pc-windows-gnu/release/topdock.exe

@@ -46,41 +46,75 @@ TopDock adalah aplikasi desktop Windows native berbasis Rust yang menyediakan fl
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Option A: Build di Debian Server (Recommended)
 
-1. **Rust** - Install dari [rustup.rs](https://rustup.rs/)
-2. **Visual Studio Build Tools** - Untuk Windows SDK dan MSVC
+**✨ Tidak perlu install Rust di Windows!**
 
-Lihat [SETUP.md](SETUP.md) untuk panduan lengkap.
+```bash
+# 1. SSH ke server Debian
+ssh user@your-server
 
-### Build & Run
-
-```powershell
-# Clone repository
+# 2. Clone repository
 git clone https://github.com/yourusername/topdock.git
 cd topdock
 
-# Build project
-cargo build --release
+# 3. Setup build environment (run once)
+make setup
+# atau: chmod +x build-server-setup.sh && ./build-server-setup.sh
 
-# Run
-cargo run --release
+# 4. Build untuk Windows
+make build
+# atau: ./build.sh
+
+# 5. Transfer ke Windows
+make deploy IP=192.168.1.100
+# atau: scp target/x86_64-pc-windows-gnu/release/topdock.exe user@windows:~/Desktop/
+
+# 6. Di Windows, double-click topdock.exe untuk run
 ```
 
-### Development
+📖 **Panduan lengkap:** [BUILD_SERVER.md](BUILD_SERVER.md)
 
-```powershell
-# Run in debug mode
-cargo run
+### Option B: Build di Windows
 
-# Run tests
-cargo test
+1. **Prerequisites**
+   - Rust - Install dari [rustup.rs](https://rustup.rs/)
+   - Visual Studio Build Tools
 
-# Check code
-cargo clippy
+2. **Build**
+   ```powershell
+   # Clone repository
+   git clone https://github.com/yourusername/topdock.git
+   cd topdock
 
-# Format code
-cargo fmt
+   # Build project
+   cargo build --release
+
+   # Run
+   cargo run --release
+   ```
+
+Lihat [SETUP.md](SETUP.md) untuk panduan lengkap.
+
+### Development Commands
+
+```bash
+# Build
+make build              # Release build
+make build-debug        # Debug build (faster)
+make quick             # Quick build untuk testing
+
+# Testing
+make test              # Run tests
+make check             # Lint dengan clippy
+make fmt               # Format code
+
+# Deploy
+make deploy IP=192.168.1.100
+
+# Clean
+make clean             # Hapus build artifacts
+make rebuild           # Clean + build
 ```
 
 ## 📁 Struktur Project
